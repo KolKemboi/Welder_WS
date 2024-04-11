@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<robot name="welder" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="Silver" value="Gazebo/Silver" />
+<xacro:property name="Red" value="Gazebo/Red" />
+<xacro:property name="Blue" value="Gazebo/Blue" />
+<xacro:property name="White" value="Gazebo/White" />
+<xacro:property name="Green" value="Gazebo/Green" />
+<xacro:property name="Yellow" value="Gazebo/Yellow" />
+<xacro:property name="Orange" value="Gazebo/Orange" />
+
+<gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+        <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
+        <parameters>$(find welder_description)/config/my_controllers.yaml</parameters>
+    </plugin>
+</gazebo>
+
+<gazebo reference="base_link">
+  <material>${White}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="link_1_1">
+  <material>${Red}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="link_2_1">
+  <material>${Green}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="link_3_1">
+  <material>${Blue}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="link_4_1">
+  <material>${Yellow}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="link_5_1">
+  <material>${Orange}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="link_6_1">
+  <material>${Silver}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+</robot>

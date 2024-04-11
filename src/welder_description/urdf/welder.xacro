@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<robot name="welder" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find welder_description)/urdf/ros2_control.xacro" />
+<xacro:include filename="$(find welder_description)/urdf/welder.trans" />
+<xacro:include filename="$(find welder_description)/urdf/welder.gazebo" />
+
+<link name="world">
+  
+</link>
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-7.16285389829585e-11 -1.5064593165281103e-11 0.019107627086653742" rpy="0 0 0"/>
+    <mass value="2.955437891841375"/>
+    <inertia ixx="0.002819" iyy="0.002819" izz="0.004764" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="0.0 0.0009431909165482249 0.11440920058437602" rpy="0 0 0"/>
+    <mass value="2.2877730999420254"/>
+    <inertia ixx="0.009859" iyy="0.009807" izz="0.000515" ixy="0.0" iyz="-0.000185" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="0.0 -0.02834196834303381 -0.012543410312423592" rpy="0 0 0"/>
+    <mass value="0.8650806084810733"/>
+    <inertia ixx="0.000478" iyy="0.0004" izz="0.000257" ixy="0.0" iyz="-1.8e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.02 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.02 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="0.0 -0.0009734727614764405 -0.056920756556270824" rpy="0 0 0"/>
+    <mass value="1.1630985552142648"/>
+    <inertia ixx="0.001298" iyy="0.00127" izz="0.000267" ixy="0.0" iyz="-3.8e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.05 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.05 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="0.0 -0.024901368509315194 0.031832335951871196" rpy="0 0 0"/>
+    <mass value="1.2085805984841382"/>
+    <inertia ixx="0.001374" iyy="0.001327" izz="0.000295" ixy="0.0" iyz="4e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.075 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.075 -0.11" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1">
+  <inertial>
+    <origin xyz="0.0 -4.404769588479962e-05 0.03489668781804081" rpy="0 0 0"/>
+    <mass value="0.7187100595069817"/>
+    <inertia ixx="0.000352" iyy="0.000343" izz="0.000159" ixy="-0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.1 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.1 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_1">
+  <inertial>
+    <origin xyz="0.0 -0.01680268432280871 1.6653345369377348e-16" rpy="0 0 0"/>
+    <mass value="0.26501912859947435"/>
+    <inertia ixx="5.2e-05" iyy="3.9e-05" izz="5.2e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.12 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.12 -0.25" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find welder_description)/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="world_joint" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint>
+
+<joint name="joint_1" type="continuous">
+  <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link_1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="joint_2" type="continuous">
+  <origin xyz="0.0 -0.02 0.2" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="link_2_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="joint_3" type="continuous">
+  <origin xyz="0.0 -0.03 -0.05" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="link_3_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="joint_4" type="continuous">
+  <origin xyz="0.0 -0.025 -0.09" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="link_4_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint_5" type="continuous">
+  <origin xyz="0.0 -0.025 0.09" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="link_5_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="joint_6" type="continuous">
+  <origin xyz="0.0 -0.02 0.05" rpy="0 0 0"/>
+  <parent link="link_5_1"/>
+  <child link="link_6_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>
